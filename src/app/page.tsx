@@ -1,9 +1,15 @@
-import React from 'react'
+'use client';
 
-const Index = () => {
+import { ConfigProvider} from 'antd';
+import theme from './theme/themeConfig'
+
+import Index from "./components/Index"
+
+export default function Home() {
+
   return (
-    <div>Start</div>
+    <ConfigProvider theme={theme}>
+      <Index/>
+    </ConfigProvider>
   )
 }
-
-export default Index
